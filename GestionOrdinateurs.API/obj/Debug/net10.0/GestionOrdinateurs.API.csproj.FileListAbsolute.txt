@@ -1,0 +1,56 @@
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\bin\Debug\net10.0\appsettings.Development.json
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\bin\Debug\net10.0\appsettings.json
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\bin\Debug\net10.0\GestionOrdinateurs.API.staticwebassets.endpoints.json
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\bin\Debug\net10.0\GestionOrdinateurs.API.exe
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\bin\Debug\net10.0\GestionOrdinateurs.API.deps.json
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\bin\Debug\net10.0\GestionOrdinateurs.API.runtimeconfig.json
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\bin\Debug\net10.0\GestionOrdinateurs.API.dll
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\bin\Debug\net10.0\GestionOrdinateurs.API.pdb
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\bin\Debug\net10.0\Microsoft.OpenApi.dll
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\bin\Debug\net10.0\GestionOrdinateurs.Shared.dll
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\bin\Debug\net10.0\GestionOrdinateurs.Shared.pdb
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\GestionOrdinateurs.API.csproj.AssemblyReference.cache
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\GestionOrdinateurs.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\GestionOrdinateurs.API.AssemblyInfoInputs.cache
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\GestionOrdinateurs.API.AssemblyInfo.cs
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\GestionOrdinateurs.API.csproj.CoreCompileInputs.cache
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\GestionOrdinateurs.API.MvcApplicationPartsAssemblyInfo.cs
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\GestionOrdinateurs.API.MvcApplicationPartsAssemblyInfo.cache
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\rjimswa.dswa.cache.json
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\scopedcss\bundle\GestionOrdinateurs.API.styles.css
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\staticwebassets.build.json
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\staticwebassets.build.json.cache
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\staticwebassets.development.json
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\swae.build.ex.cache
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\GestionO.D1FC6A56.Up2Date
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\GestionOrdinateurs.API.dll
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\refint\GestionOrdinateurs.API.dll
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\GestionOrdinateurs.API.pdb
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\GestionOrdinateurs.API.genruntimeconfig.cache
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\ref\GestionOrdinateurs.API.dll
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\appsettings.Development.json
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\appsettings.json
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\bin\Debug\net10.0\appsettings.Development.json
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\bin\Debug\net10.0\appsettings.json
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\bin\Debug\net10.0\GestionOrdinateurs.API.deps.json
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\bin\Debug\net10.0\GestionOrdinateurs.API.runtimeconfig.json
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\bin\Debug\net10.0\GestionOrdinateurs.API.staticwebassets.endpoints.json
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\GestionOrdinateurs.API.staticwebassets.endpoints.json
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\GestionOrdinateurs.API.exe
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\GestionOrdinateurs.API.deps.json
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\GestionOrdinateurs.API.runtimeconfig.json
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\GestionOrdinateurs.API.dll
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\GestionOrdinateurs.API.pdb
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\bin\Release\net10.0\BuildHost-net472\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.exe.config
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\bin\Release\net10.0\appsettings.Development.json
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\bin\Release\net10.0\appsettings.json
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\bin\Release\net10.0\BuildHost-netcore\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.deps.json
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\bin\Release\net10.0\BuildHost-netcore\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.runtimeconfig.json
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\bin\Release\net10.0\GestionOrdinateurs.API.deps.json
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\bin\Release\net10.0\GestionOrdinateurs.API.runtimeconfig.json
+C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\bin\Release\net10.0\GestionOrdinateurs.API.staticwebassets.endpoints.json

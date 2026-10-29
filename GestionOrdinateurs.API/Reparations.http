@@ -1,0 +1,7 @@
+@baseUrl = http://localhost:5158
+
+### Simuler trois réparations simultanément (nécessite au moins trois ordinateurs)
+POST {{baseUrl}}/api/Reparation/simuler
+
+### Lister les réparations avec les informations des ordinateurs associés
+GET {{baseUrl}}/api/Reparation

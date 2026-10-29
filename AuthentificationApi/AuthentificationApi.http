@@ -1,0 +1,14 @@
+@AuthentificationApi_HostAddress = http://localhost:5192
+
+GET {{AuthentificationApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{AuthentificationApi_HostAddress}}/api/authentication
+Content-Type: application/json
+
+{
+  "login": "user1",
+  "role": "Admin"
+}

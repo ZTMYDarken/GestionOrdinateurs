@@ -1,0 +1,81 @@
+@page "/login"
+@using System.ComponentModel.DataAnnotations
+@using System.Net.Http.Json
+@using Blazored.SessionStorage
+@inject IHttpClientFactory HttpClientFactory
+@inject ISessionStorageService SessionStorage
+@inject NavigationManager Navigation
+
+<PageTitle>Connexion</PageTitle>
+
+<h1>Connexion</h1>
+
+<p>Saisissez votre login. Aucun mot de passe n’est utilisé dans ce TP.</p>
+
+<EditForm Model="@form" OnValidSubmit="ConnectAsync">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label for="login" class="form-label">Utilisateur</label>
+        <InputText id="login" class="form-control" @bind-Value="form.Login" />
+    </div>
+
+    <button class="btn btn-primary" type="submit">Connecter</button>
+</EditForm>
+
+@if (!string.IsNullOrWhiteSpace(errorMessage))
+{
+    <div class="alert alert-danger mt-3" role="alert">@errorMessage</div>
+}
+
+@code {
+    private readonly LoginForm form = new();
+    private string? errorMessage;
+
+    private async Task ConnectAsync()
+    {
+        errorMessage = null;
+
+        try
+        {
+            var login = form.Login.Trim();
+            var authClient = HttpClientFactory.CreateClient("Gateway");
+            using var tokenResponse = await authClient.PostAsJsonAsync(
+                "api/Authentication",
+                new { Login = login });
+
+            if (tokenResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                errorMessage = "Cet utilisateur n’existe pas.";
+                return;
+            }
+
+            if (!tokenResponse.IsSuccessStatusCode)
+            {
+                errorMessage = $"La génération du jeton a échoué (HTTP {(int)tokenResponse.StatusCode}).";
+                return;
+            }
+
+            var token = await tokenResponse.Content.ReadAsStringAsync();
+            if (string.IsNullOrWhiteSpace(token))
+            {
+                errorMessage = "Impossible de lire le jeton.";
+                return;
+            }
+
+            await SessionStorage.SetItemAsync("jwtToken", token);
+            Navigation.NavigateTo("/");
+        }
+        catch (HttpRequestException)
+        {
+            errorMessage = "Impossible de contacter une API. Vérifiez qu’elle est démarrée.";
+        }
+    }
+
+    private sealed class LoginForm
+    {
+        [Required(ErrorMessage = "Le login est obligatoire.")]
+        public string Login { get; set; } = string.Empty;
+    }
+}

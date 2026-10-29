@@ -10,7 +10,9 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowBlazorClient", policy =>
     {
-        policy.WithOrigins("http://localhost:5021")
+        policy.WithOrigins(
+                builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>()
+                ?? ["http://localhost:5021", "http://localhost:5000"])
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
@@ -23,7 +25,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient("GestionOrdinateursApi", client =>
-    client.BaseAddress = new Uri("http://localhost:5158/"));
+    client.BaseAddress = new Uri(
+        builder.Configuration["Services:GestionOrdinateursApi"] ?? "http://localhost:5158/"));
 builder.Services.AddDbContext<AuthentificationContext>(options =>
     options.UseSqlite("Data Source=authentification.db"));
 

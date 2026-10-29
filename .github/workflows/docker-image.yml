@@ -1,0 +1,65 @@
+name: GestionOrdinateurs
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+env:
+  DOCKER_REGISTRY: ${{ secrets.DOCKER_ACCOUNT }}
+
+jobs:
+
+  tests:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+  
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+  
+      - name: Restore
+        run: dotnet restore
+  
+      - name: Build solution
+        run: dotnet build --no-restore
+  
+      - name: Run tests
+        run: dotnet test GestionOrdinateurs.Tests/GestionOrdinateurs.Tests.csproj --no-build --verbosity normal
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: tests
+    environment: dev
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Login Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+        
+      - name: Build and push AuthentificationApi
+        run: |
+          docker build -t "${{ env.DOCKER_REGISTRY }}/authentificationapi:latest" -f AuthentificationApi/Dockerfile .
+          docker push "${{ env.DOCKER_REGISTRY }}/authentificationapi:latest"
+
+      - name: Build and push GestionOrdinateurs API
+        run: |
+          docker build -t "${{ env.DOCKER_REGISTRY }}/gestionordinateurs-api:latest" -f GestionOrdinateurs.API/Dockerfile .
+          docker push "${{ env.DOCKER_REGISTRY }}/gestionordinateurs-api:latest"
+
+      - name: Build and push Gateway
+        run: |
+          docker build -t "${{ env.DOCKER_REGISTRY }}/gestionordinateurs-gateway:latest" -f GestionOrdinateurs.Gateway/Dockerfile .
+          docker push "${{ env.DOCKER_REGISTRY }}/gestionordinateurs-gateway:latest"
+
+      - name: Build and push Blazor client
+        run: |
+          docker build -t "${{ env.DOCKER_REGISTRY }}/gestionordinateurs-client:latest" -f GestionOrdinateurs.Client/Dockerfile .
+          docker push "${{ env.DOCKER_REGISTRY }}/gestionordinateurs-client:latest"

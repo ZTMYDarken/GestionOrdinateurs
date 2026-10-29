@@ -10,6 +10,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 builder.Services.AddBlazoredSessionStorage();
 builder.Services.AddHttpClient("Gateway", client =>
-    client.BaseAddress = new Uri("http://localhost:5010/"));
+    client.BaseAddress = new Uri(
+        builder.Configuration["GatewayBaseUrl"] ?? builder.HostEnvironment.BaseAddress));
 
 await builder.Build().RunAsync();

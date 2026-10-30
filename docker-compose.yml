@@ -1,0 +1,97 @@
+services:
+
+  postgres:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: GestionOrdinateursDb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - appnet
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.8.1
+    container_name: keycloak
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_HOSTNAME: localhost
+      KC_HOSTNAME_PORT: 8180
+      KC_HTTP_ENABLED: "true"
+      KC_HEALTH_ENABLED: "true"
+      KC_HOSTNAME_STRICT_BACKCHANNEL: "false"
+      KC_HOSTNAME_STRICT_HTTPS: "false"
+    command: start-dev
+    ports:
+      - "8180:8080"
+    volumes:
+      - keycloak_data:/opt/keycloak/data
+    networks:
+      - appnet
+
+  authentification-api:
+    image: ${DOCKER_ACCOUNT}/authentificationapi:latest
+    build:
+      context: .
+      dockerfile: AuthentificationApi/Dockerfile
+    container_name: authentification_api
+    ports:
+      - "5157:5157"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:5157
+    depends_on:
+      - postgres
+      - keycloak
+    networks:
+      - appnet
+
+  gestionordinateurs-api:
+    image: ${DOCKER_ACCOUNT}/gestionordinateurs-api:latest
+    build:
+      context: .
+      dockerfile: GestionOrdinateurs.API/Dockerfile
+    container_name: gestionordinateurs_api
+    ports:
+      - "5158:8080"
+    networks:
+      - appnet
+
+  gateway:
+    image: ${DOCKER_ACCOUNT}/gestionordinateurs-gateway:latest
+    build:
+      context: .
+      dockerfile: GestionOrdinateurs.Gateway/Dockerfile
+    container_name: gestionordinateurs_gateway
+    ports:
+      - "5010:8080"
+    depends_on:
+      - authentification-api
+      - gestionordinateurs-api
+    networks:
+      - appnet
+
+  client:
+    image: ${DOCKER_ACCOUNT}/gestionordinateurs-client:latest
+    build:
+      context: .
+      dockerfile: GestionOrdinateurs.Client/Dockerfile
+    container_name: gestionordinateurs_client
+    ports:
+      - "5000:5000"
+    depends_on:
+      - gateway
+    networks:
+      - appnet
+
+volumes:
+  postgres_data:
+  keycloak_data:
+
+networks:
+  appnet:

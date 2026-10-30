@@ -56,6 +56,33 @@ public class AuthenticationController : ControllerBase
         return Ok(GenTokenJWT(key, user.Role, user.Login));
     }
 
+    // Reçoit le login et le mot de passe, les envoie à Keycloak et renvoie la réponse de Keycloak 
+    [HttpPost("login")]
+    public async Task<IActionResult> Login([FromBody] LoginRequest request)
+    {
+        var realm = _configuration["Keycloak:Realm"];
+        var form = new FormUrlEncodedContent(new Dictionary<string, string>
+        {
+            ["grant_type"] = "password",
+            ["client_id"] = _configuration["Keycloak:ClientId"] ?? "",
+            ["client_secret"] = _configuration["Keycloak:ClientSecret"] ?? "",
+            ["username"] = request.Username,
+            ["password"] = request.Password
+        });
+
+        var client = _httpClientFactory.CreateClient("Keycloak");
+        using var keycloakResponse = await client.PostAsync(
+            $"realms/{realm}/protocol/openid-connect/token", form);
+
+        if (!keycloakResponse.IsSuccessStatusCode)
+        {
+            return Unauthorized("Identifiant ou mot de passe incorrect.");
+        }
+
+        var content = await keycloakResponse.Content.ReadAsStringAsync();
+        return Content(content, "application/json");
+    }
+
     // Génère le token JWT avec le login et le rôle de l'utilisateur dans les claims
     private string GenTokenJWT(byte[] keyP, RoleEnum role, string login)
     {
@@ -80,3 +107,6 @@ public class AuthenticationController : ControllerBase
 
 // Corps de la requête : uniquement le login
 public sealed record CreateTokenRequest([param: Required] string Login);
+
+// Corps de la requête de connexion Keycloak : login et mot de passe
+public sealed record LoginRequest([param: Required] string Username, [param: Required] string Password);

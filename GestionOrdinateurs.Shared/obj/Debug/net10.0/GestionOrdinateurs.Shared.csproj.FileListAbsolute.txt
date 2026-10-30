@@ -12,3 +12,15 @@ C:\EFREI\S7\Environnement .NET et C#\TP\TP1\ServicesSln\GestionOrdinateurs\Gesti
 C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\GestionOrdinateurs.Shared.deps.json
 C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\GestionOrdinateurs.Shared.dll
 C:\Users\Ivan\AppData\Local\Temp\GestionOrdinateursBuild\Debug\net10.0\GestionOrdinateurs.Shared.pdb
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateurs.Shared\bin\Debug\net10.0\GestionOrdinateurs.Shared.deps.json
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateurs.Shared\bin\Debug\net10.0\GestionOrdinateurs.Shared.dll
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateurs.Shared\bin\Debug\net10.0\GestionOrdinateurs.Shared.pdb
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateurs.Shared\obj\Debug\net10.0\GestionOrdinateurs.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateurs.Shared\obj\Debug\net10.0\GestionOrdinateurs.Shared.AssemblyInfoInputs.cache
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateurs.Shared\obj\Debug\net10.0\GestionOrdinateurs.Shared.AssemblyInfo.cs
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateurs.Shared\obj\Debug\net10.0\GestionOrdinateurs.Shared.csproj.CoreCompileInputs.cache
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateurs.Shared\obj\Debug\net10.0\GestionOrdinateurs.Shared.sourcelink.json
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateurs.Shared\obj\Debug\net10.0\GestionOrdinateurs.Shared.dll
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateurs.Shared\obj\Debug\net10.0\refint\GestionOrdinateurs.Shared.dll
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateurs.Shared\obj\Debug\net10.0\GestionOrdinateurs.Shared.pdb
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateurs.Shared\obj\Debug\net10.0\ref\GestionOrdinateurs.Shared.dll

@@ -218,3 +218,4 @@ C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateur
 C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\GestionOrdinateurs.API.pdb
 C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\GestionOrdinateurs.API.genruntimeconfig.cache
 C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateurs.API\obj\Debug\net10.0\ref\GestionOrdinateurs.API.dll
+C:\EFREI\S7\Environnement .NET et C#\TP\TP1\GestionOrdinateurs\GestionOrdinateurs.API\bin\Debug\net10.0\parcinfo.db

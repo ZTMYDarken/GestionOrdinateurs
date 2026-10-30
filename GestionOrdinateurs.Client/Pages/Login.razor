@@ -10,7 +10,7 @@
 
 <h1>Connexion</h1>
 
-<p>Saisissez votre login. Aucun mot de passe n’est utilisé dans ce TP.</p>
+<p>Saisissez votre login et votre mot de passe.</p>
 
 <EditForm Model="@form" OnValidSubmit="ConnectAsync">
     <DataAnnotationsValidator />
@@ -19,6 +19,11 @@
     <div class="mb-3">
         <label for="login" class="form-label">Utilisateur</label>
         <InputText id="login" class="form-control" @bind-Value="form.Login" />
+    </div>
+
+    <div class="mb-3">
+        <label for="password" class="form-label">Mot de passe</label>
+        <InputText id="password" type="password" class="form-control" @bind-Value="form.Password" />
     </div>
 
     <button class="btn btn-primary" type="submit">Connecter</button>
@@ -42,12 +47,12 @@
             var login = form.Login.Trim();
             var authClient = HttpClientFactory.CreateClient("Gateway");
             using var tokenResponse = await authClient.PostAsJsonAsync(
-                "api/Authentication",
-                new { Login = login });
+                "api/Authentication/login",
+                new { Username = login, Password = form.Password });
 
-            if (tokenResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
+            if (tokenResponse.StatusCode == System.Net.HttpStatusCode.Unauthorized)
             {
-                errorMessage = "Cet utilisateur n’existe pas.";
+                errorMessage = "Identifiant ou mot de passe incorrect.";
                 return;
             }
 
@@ -57,7 +62,8 @@
                 return;
             }
 
-            var token = await tokenResponse.Content.ReadAsStringAsync();
+            var loginResponse = await tokenResponse.Content.ReadFromJsonAsync<LoginResponse>();
+            var token = loginResponse?.access_token;
             if (string.IsNullOrWhiteSpace(token))
             {
                 errorMessage = "Impossible de lire le jeton.";
@@ -77,5 +83,16 @@
     {
         [Required(ErrorMessage = "Le login est obligatoire.")]
         public string Login { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Le mot de passe est obligatoire.")]
+        public string Password { get; set; } = string.Empty;
+    }
+
+    // Réponse renvoyée par Keycloak
+    private sealed class LoginResponse
+    {
+        public string? access_token { get; set; }
+        public int expires_in { get; set; }
+        public string? refresh_token { get; set; }
     }
 }

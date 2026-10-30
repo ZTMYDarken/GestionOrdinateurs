@@ -29,6 +29,9 @@ builder.Services.AddHttpClient("GestionOrdinateursApi", client =>
         builder.Configuration["Services:GestionOrdinateursApi"] ?? "http://localhost:5158/"));
 builder.Services.AddDbContext<AuthentificationContext>(options =>
     options.UseSqlite("Data Source=authentification.db"));
+builder.Services.AddHttpClient("Keycloak", client =>
+    client.BaseAddress = new Uri(
+        builder.Configuration["Keycloak:BaseUrl"] ?? "http://localhost:8180"));
 
 var jwtKey = builder.Configuration["Jwt:Key"]
     ?? throw new InvalidOperationException("La clé JWT Jwt:Key est manquante.");
